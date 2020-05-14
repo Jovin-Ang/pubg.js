@@ -140,7 +140,7 @@ class Client {
      * @returns {Promise<PlayerSeason>}
      * @memberof Client
      */
-    getPlayerSeason(player, season, shard) {
+    getPlayerSeason(player, season, shard, gamepad) {
         return this._baseRequest({
             endpoint: `players/${
                 player instanceof Player ? player.id : player
@@ -149,6 +149,9 @@ class Client {
                 player instanceof Player ?
                     player.attributes.shardId :
                     shard || this.defaultShard,
+            params: gamepad ?
+                    { 'filter[gamepad]': true } :
+                    {},
         })
             .then(ps => {
                 if (player instanceof Player) ps.data.relationships.player = player;
