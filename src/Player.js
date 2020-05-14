@@ -66,7 +66,7 @@ class Player {
      * @returns {Promise<PlayerSeason>}
      * @memberof Player
      */
-    getPlayerSeason(season, shard = this.attributes.shardId) {
+    getPlayerSeason(season, shard = this.attributes.shardId, gamepad = false) {
         return this.client.getPlayerSeason(this, season, shard);
     }
 
