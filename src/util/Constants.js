@@ -3,10 +3,12 @@ module.exports = {
 
     SHARDS: [
         'kakao',
+        'stadia',
         'psn',
         'steam',
         'tournament',
         'xbox',
+        'console',
         'pc-as',
         'pc-eu',
         'pc-jp',
