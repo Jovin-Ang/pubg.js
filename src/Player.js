@@ -58,6 +58,17 @@ class Player {
             ),
         };
     }
+    
+    /**
+     * Get a player season ranked object
+     * @param {(string|Season)} season The season of the player season
+     * @param {string} [shard=this.attributes.shardId] The shard of the player season
+     * @returns {Promise<PlayerSeasonRanked>}
+     * @memberof Player
+     */
+    getPlayerSeasonRanked(season, shard = this.attributes.shardId) {
+        return this.client.getPlayerSeasonRanked(this, season, shard);
+    }
 
     /**
      * Get a player season object
