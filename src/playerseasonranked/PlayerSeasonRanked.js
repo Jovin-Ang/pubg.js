@@ -14,7 +14,7 @@ class PlayerSeasonRanked {
          * @property {Object} attributes.rankedGameModeStats An object full of all ranked game mode types being `squad`, `squadFPP`
          */
         this.attributes = {
-            gameModeStats: {
+            rankedGameModeStats: {
                 squad: new RankedGameModeStats(content.attributes.rankedGameModeStats.squad),
                 squadFPP: new RankedGameModeStats(
                     content.attributes.rankedGameModeStats['squad-fpp']
