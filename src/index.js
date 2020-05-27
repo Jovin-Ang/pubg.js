@@ -9,6 +9,9 @@ module.exports = {
     GameModeStats: require('./playerseason/GameModeStats'),
     PlayerSeason: require('./playerseason/PlayerSeason'),
 
+    RankedGameModeStats: require('./playerseasonranked/RankedGameModeStats'),
+    PlayerSeasonRanked: require('./playerseasonranked/PlayerSeasonRanked'),
+
     Player: require('./Player'),
     Season: require('./Season'),
     Status: require('./Status'),
