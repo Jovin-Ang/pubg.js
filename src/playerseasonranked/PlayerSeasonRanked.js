@@ -15,10 +15,12 @@ class PlayerSeasonRanked {
          */
         this.attributes = {
             rankedGameModeStats: {
-                squad: new RankedGameModeStats(content.attributes.rankedGameModeStats.squad),
-                squadFPP: new RankedGameModeStats(
+                squad: content.attributes.rankedGameModeStats.squad ? new RankedGameModeStats(
+                    content.attributes.rankedGameModeStats.squad
+                ) : {},
+                squadFPP: content.attributes.rankedGameModeStats['squad-fpp'] ? new RankedGameModeStats(
                     content.attributes.rankedGameModeStats['squad-fpp']
-                ),
+                ) : {},
             },
         };
 
